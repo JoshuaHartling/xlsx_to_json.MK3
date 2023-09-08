@@ -22,7 +22,7 @@ update_defaults = True  # if set to false, the global values row will be ignored
 adom = 'root'                       # name of adom; if ADOM's are not in use, specify 'root'
 host = "Your_FortiManager_IP:port"  # the IP address or hostname of FortiManager
 username = "Your_Username"          # the username used to log into FMG
-password = "Your_Password"          # the password used to log into FMG
+password = None                     # the password used to log into FMG; set to None to manually enter password
 lock_adom = False   # set to true if workflow mode is in use and ADOM must be locked before editing
 verify_cert = True  # set to False, if your FMG instance is using an untrusted certificate
 

@@ -54,7 +54,8 @@ not been enabled on FortiManager, leave it as "root" as that is the default ADOM
 * **host:** is the IP address or hostname of your FortiManager instance.  Also include your management
 port information here if difference from default 443.
 * **username:** this is the username of your API administrator account.
-* **password:** this is the password of your API administrator account.
+* **password:** this is the password of your API administrator account.  Use the *None* keyword
+to manually enter the password each time you run this program.
 * **lock_adom:** set this boolean to True if your FortiManager uses workspace mode.
 * **verify_cert:** set this boolean to False if your FortiManager is using an untrusted cert.  
 Typically this value will need to be set to False.

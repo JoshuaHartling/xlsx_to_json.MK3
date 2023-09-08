@@ -20,6 +20,10 @@ with open(f"{OUTPUT}", 'r') as json_file:
     data = json.load(json_file)
 
 
+# Set password
+if password is None:
+    password = input("Enter FortiManager API Administrator Password: ")
+
 # Create FMG Object
 FMG = FmgAPICall(host=host, username=username, password=password, adom=adom, adom_lock=lock_adom, verify=verify_cert)
 
