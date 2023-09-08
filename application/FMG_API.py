@@ -1,5 +1,4 @@
 import requests
-import urllib3
 import pprint
 import atexit
 import inspect
@@ -205,10 +204,6 @@ class FmgAPICall:
         # Make API call, check, and return
         results = requests.post(self.url, json=body, verify=self.verify)
         return api_check(results, inspect.stack()[0][3], suppress)
-
-    # suppress API certificate warning
-    def suppress_warning(self):
-        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
     # FMG login action
     def login(self, suppress):

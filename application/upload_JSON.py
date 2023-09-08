@@ -1,4 +1,5 @@
 import pprint
+import urllib3
 import json
 from application.FMG_API import FmgAPICall
 from application.constants import *
@@ -6,6 +7,10 @@ from user_settings import *
 
 # enable/disable debug
 debug = False   # if True, script will upload data one variable at a time for better debugging
+
+# Disable certificate verification warnings
+if verify_cert is False:
+    urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 # pretty print object
 pp = pprint.PrettyPrinter()
